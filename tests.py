@@ -1,14 +1,10 @@
-from functions.get_files_info import get_files_info
+from functions.get_file_contents import get_file_content
 
 def main():
-    print("getting (calculator, .)")
-    print(get_files_info("calculator" , "."))
-    print("getting (calculator, pkg)")
-    print(get_files_info("calculator", "pkg"))
-    print("getting (calculator, /bin)")
-    print(get_files_info("calculator", "/bin"))
-    print("getting (calculator, ../)")
-    print(get_files_info("calculator", "../"))
 
+    print(get_file_content("calculator", "main.py"))
+    print(get_file_content("calculator", "pkg/calculator.py"))
+    print(get_file_content("calculator", "/bin/cat"))
+    print(get_file_content("calculator", "pkg/does_not_exist.py"))
 if __name__ == "__main__":
     main()
