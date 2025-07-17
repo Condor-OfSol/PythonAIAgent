@@ -3,3 +3,4 @@
 .python-version
 *.lock
 .env
+*pycache*
